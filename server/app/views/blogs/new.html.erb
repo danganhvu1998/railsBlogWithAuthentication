@@ -1,0 +1,14 @@
+<h1>Add blog here</h1>
+<%= form_for :newBlog, url:blogs_path, method: :post do |f| %>
+    <p>
+        <%= f.label :title%>
+        <%= f.text_field(:title, {:class => "form-control"}) %>
+    </p>
+    <p>
+        <%= f.label :content%>
+        <%= f.text_area(:content , {:class => "form-control"}) %>
+    </p>
+    <p>
+        <%= f.submit(:class => "btn btn-success")%>
+    </p>
+<% end %>

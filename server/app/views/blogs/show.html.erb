@@ -1,1 +1,5 @@
-lol the hell
+<h3> <%= @blog.title %> </h3>
+<p> <%= @blog.content %> </p>
+<p> <%= @blog.user.email %> </p>
+<%= link_to 'Edit', edit_blog_path(@blog), :class => "btn btn-primary",  method: :get %>
+<%= link_to 'Delete', blog_path(@blog), :class => "btn btn-danger", method: :Delete %>

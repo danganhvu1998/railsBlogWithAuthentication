@@ -1,0 +1,12 @@
+<h1>All Blogs</h1>
+<%= @blogs.each do |blog| %>
+    <div class="well">
+        <h3> <%= blog.title %> </h3>
+        <p> <%= blog.content %> </p>
+        <p> <%= blog.user.email %> </p>
+        <%= link_to 'Show', blog_path(blog), :class => "btn btn-success " %>
+        <%= link_to 'Edit', edit_blog_path(blog), :class => "btn btn-primary",  method: :get %>
+        <%= link_to 'Delete', blog_path(blog), :class => "btn btn-danger", method: :Delete %>
+        <hr>
+    </div>
+<% end %>

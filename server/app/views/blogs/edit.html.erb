@@ -1,0 +1,14 @@
+<h1>Edit</h1>
+<%= form_for :newBlog, url:blog_path(@newBlog), method: :patch do |f| %>
+    <p>
+        <%= f.label :title%>
+        <%= f.text_field(:title, {:class => "form-control"}) %>
+    </p>
+    <p>
+        <%= f.label :content%>
+        <%= f.text_area(:content , {:class => "form-control"}) %>
+    </p>
+    <p>
+        <%= f.submit(:class => "btn btn-success")%>
+    </p>
+<% end %>
